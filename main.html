@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mendeley-Library</title>
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav class="lib-nav">
+        <a href="#" class="lib-nav-logo">
+            <img src="img/logo.png" alt="标志">
+            <span>武汉大学信息检索与知识挖掘研究所</span>
+        </a>
+        <div class="lib-nav-main">
+            <ul>
+                <li class="lib-nav-item"><a href="#">Feed</a></li>
+                <li class="lib-nav-item"><a href="#" class="active">Library</a></li>
+                <li class="lib-nav-item"><a href="#">Suggest</a></li>
+                <li class="lib-nav-item"><a href="#">Stats</a></li>
+                <li class="lib-nav-item"><a href="#">Groups</a></li>
+                <li class="lib-nav-item"><a href="#">Data</a></li>
+                <li class="lib-nav-item"><a href="#">Careers</a></li>
+                <li class="lib-nav-sear">
+                    <input type="text" name="query" placeholder="Library Search">
+                </li>
+                <li class="lib-nav-item lib-nav-profile">
+                    <a href="#">
+                        <span>username</span>
+                        <img src="img/user.png" alt="用户头像">
+                    </a>
+                </li>
+                <li class="lib-nav-sub lib-nav-item">
+                    <a href="#" class="icon icon-arrow-down"></a>
+                    <ul class="lib-nav-sub-menu">
+                        <li class="lib-nav-sub-menu-item"><a href="#">Settings</a></li>
+                        <li class="lib-nav-sub-menu-item"><a href="#">Privacy</a></li>
+                        <li class="lib-nav-sub-menu-item"><a href="#">Download</a></li>
+                        <li class="lib-nav-sub-menu-item"><a href="#">Support</a></li>
+                        <li class="lib-nav-sub-menu-item"><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="lib-aside-left">
+            <div class="lib-aside-add">
+                <button class="lib-aside-add-btn">Add</button>
+                <ul class="lib-aside-add-menu">
+                    <li class="lib-aside-add-menu-item">
+                        <span>Import document</span>
+                        <input type="file">
+                    </li>
+                    <li class="lib-aside-add-menu-item">
+                        <span>New folder</span>
+                    </li>
+                    <li class="lib-aside-add-menu-item">
+                        <span>New manual entry</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="lib-aside-add-menu-item">
+                        <span>Import Endnote(.xml)</span>
+                        <input type="file">
+                    </li>
+                    <li class="lib-aside-add-menu-item">
+                        <span>Import RIS(.ris)</span>
+                        <input type="file">
+                    </li>
+                    <li class="lib-aside-add-menu-item">
+                        <span>Import BibTeX(.bib)</span>
+                        <input type="file">
+                    </li>
+                </ul>
+            </div>
+            <div class="lib-aside-nav">
+                <div class="lib-aside-nav-item lib-aside-nav-item-main in-unfold">
+                    <h3>MY LIBRARY<i class="icon icon-caret icon-caret-blue"></i></h3>
+                    <div class="lib-aside-nav-content">
+                        <ul class="lib-aside-mylib">
+                            <li class="lib-aside-mylib-item active">
+                                <a href="#"><i class="icon icon-lib icon-doc"></i>All Documents</a>
+                            </li>
+                            <li class="lib-aside-mylib-item">
+                                <a href="#"><i class="icon icon-five-star icon-five-star-black"></i>Favorites</a>
+                            </li>
+                            <li class="lib-aside-mylib-item">
+                                <a href="#"><i class="icon icon-lib icon-pub"></i>My Publications</a>
+                            </li>
+                            <li class="lib-aside-mylib-item">
+                                <a href="#"><i class="icon icon-lib icon-read"></i>Recently Read</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lib-aside-nav-item in-fold">
+                    <h3>GROUPS<i class="icon icon-caret-blue icon-caret"></i></h3>
+                </div>
+                <div class="lib-aside-nav-item in-fold">
+                    <h3>TRASH<i class="icon icon-caret-blue icon-caret"></i></h3>
+                    <ul class="lib-aside-trash">
+                        <li class="lib-aside-trash-item">
+                            <a href="#"><i class="icon icon-trash-grey"></i>My Library</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="lib-main">
+            <section class="lib-main-header">
+                <ul class="action-toolbar">
+                    <li class="action-menu select-all">
+                        <i class="icon icon-action icon-check"></i>
+                    </li>
+                    <li class="action-menu">
+                        <i class="icon icon-action icon-file-add"></i>
+                        <span>Add to</span>
+                    </li>
+                    <li class="action-menu">
+                        <i class="icon icon-action icon-trash"></i>
+                        <span>Delete</span>
+                    </li>
+                    <li class="action-menu">
+                        <i class="icon icon-action icon-restore"></i>
+                        <span>Restore</span>
+                    </li>
+                    <li class="action-menu">
+                        <i class="icon icon-action icon-remove"></i>
+                        <span>Remove from My Publications</span>
+                    </li>
+                    <li class="action-menu">
+                        <i class="icon icon-action icon-trash-forever"></i>
+                        <span>Delete Forever</span>
+                    </li>
+                </ul>
+                <div class="action-sort">
+                    <i class="icon icon-sort"></i>
+                    <span>Added(newest)</span>
+                    <i class="icon icon-arrow"></i>
+                    <ul class="action-sort-menu">
+                        <li class="action-sort-menu-item">Added(newest)</li>
+                        <li class="action-sort-menu-item">Added(oldest)</li>
+                        <li class="action-sort-menu-item">Title(a-z)</li>
+                        <li class="action-sort-menu-item">Title(z-a)</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="lib-main-body">
+                <ul class="lib-doc-list">
+                    <li class="lib-doc-item">
+                        <span class="select-one">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                        </span>
+                        <span class="mark-favor" title="收藏"><i class="icon icon-five-star icon-five-star-grey"></i></span>
+                        <span class="mark-unread" title="标为未读"><i class="icon-unread"></i></span>
+                        <span class="file-down" title="点击下载"><a href="#" class="icon icon-download"></a></span>
+                        <h4 class="lib-doc-title">Wide & Deep Learning for Recommender Systems</h4>
+                        <p class="lib-doc-info">
+                            <span>Cheng H, Koc L, Harmsen J, et. al.</span>
+                            in arXiv preprint(2016)
+                        </p>
+                        <p class="lib-doc-time">
+                            28 Nov
+                        </p>
+                    </li>
+                    <li class="lib-doc-item">
+                        <span class="select-one">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                        </span>
+                        <span class="mark-favor" title="收藏"><i class="icon icon-five-star icon-five-star-grey"></i></span>
+                        <span class="mark-unread" title="标为未读"><i class="icon-unread"></i></span>
+                        <span class="file-down" title="点击下载"><a href="#" class="icon icon-download"></a></span>
+                        <h4 class="lib-doc-title">Wide & Deep Learning for Recommender Systems</h4>
+                        <p class="lib-doc-info">
+                            <span>Cheng H, Koc L, Harmsen J, et. al.</span>
+                            in arXiv preprint(2016)
+                        </p>
+                        <p class="lib-doc-time">
+                            28 Nov
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section class="lib-main-footer">
+                <strong>1</strong>
+                to
+                <strong>2</strong>
+                of
+                <strong>2</strong>
+            </section>
+        </section>
+        <section class="lib-aside-right">
+            <div class="lib-aside-right-handle">
+                <div class="lib-aside-right-handle-inner"></div>
+            </div>
+            <div class="lib-aside-tab">
+                <span class="tab-details active">Details</span>
+                <span class="tab-notes">Notes</span>
+            </div>
+            <div class="lib-aside-main">
+                <div class="lib-doc-detail">
+                    <div class="lib-doc-view">
+                        <button class="lib-btn lib-hover-btn lib-edit-btn">Edit</button>
+                        <div class="doc-info">
+                            <div class="doc-type">Journal Article</div>
+                            <h2 class="doc-title">Wide & Deep Learning for Recommender Systems</h2>
+                            <div class="doc-author">Cheng H,Koc L,Harmsen J,Shaked T,Chandra T,Aradhye H,Anderson G,Corrado G,Chai W,Ispir M,Anil R,Haque Z,Hong L,Jain V,Liu X,Shah H</div>
+                            <div class="doc-source">arXiv preprint</div>
+                            <div class="doc-time">2016</div>
+                        </div>
+                        <div class="doc-abs doc-abs-expand">
+                            <div class="doc-abs-content">
+                                Generalized linear models with nonlinear feature transformations are widely used for large-scale regression and classification problems with sparse inputs. Memorization of feature interactions through a wide set of cross-product feature transformations are effective and interpretable, while generalization requires more feature engineering effort. With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize and recommend less relevant items when the user-item interactions are sparse and high-rank. In this paper, we present Wide & Deep learning---jointly trained wide linear models and deep neural networks---to combine the benefits of memorization and generalization for recommender systems. We productionized and evaluated the system on Google Play, a commercial mobile app store with over one billion active users and over one million apps. Online experiment results show that Wide & Deep significantly increased app acquisitions compared with wide-only and deep-only models. We have also open-sourced our implementation in TensorFlow.
+                            </div>
+                            <a class="doc-abs-more" href="#">more<span class="caret caret-down"></span></a>
+                            <a class="doc-abs-less hide" href="#">less<span class="caret caret-up"></span></a>
+                        </div>
+                        <div class="doc-id">
+                            <p><span>DOI</span>10.1145/2988450.2988454</p>
+                            <p><span>ISBN</span>9781450347952</p>
+                            <p><span>ArXiv ID</span>1606.07792</p>
+                        </div>
+                        <div class="doc-file">
+                            <h2>FILES</h2>
+                            <ul class="doc-file-list">
+
+                            </ul>
+                            <div class="doc-file-upload">
+                                <span>upload file here</span>
+                                <input type="file" name="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lib-doc-edit">
+                        <div class="doc-edit-btngroup">
+                            <button class="lib-btn lib-save-btn">Save</button>
+                            <button class="lib-btn lib-hover-btn lib-cancel-btn">Cancel</button>
+                        </div>
+                        <div class="doc-edit">
+                            <form class="doc-edit-form">
+                                <label>TYPE</label>
+                                <select>
+                                    <option value="journal" selected="selected">Journal Article</option>
+                                    <option value="book">Book</option>
+                                    <option value="generic">Generic</option>
+                                    <option value="book_section">Book Section</option>
+                                    <option value="conference_proceedings">Conference Proceedings</option>
+                                    <option value="working_paper">Working Paper</option>
+                                    <option value="report">Report</option>
+                                    <option value="web_page">Web Page</option>
+                                    <option value="thesis">Thesis</option>
+                                    <option value="magazine_article">Magazine Article</option>
+                                    <option value="statute">Statute</option>
+                                    <option value="patent">Patent</option>
+                                    <option value="newspaper_article">Newspaper Article</option>
+                                    <option value="computer_program">Computer Program</option>
+                                    <option value="hearing">Hearing</option>
+                                    <option value="television_broadcast">Television Broadcast</option>
+                                    <option value="encyclopedia_article">Encyclopedia Article</option>
+                                    <option value="case">Case</option>
+                                    <option value="film">Film</option>
+                                    <option value="bill">Bill</option>
+                                </select>
+                                <label>TITLE</label>
+                                <input name="title" type="text">
+                                <label>AUTHORS</label>
+                                <textarea name="authors" rows="3"></textarea>
+                                <label>ABSTRACT</label>
+                                <textarea name="ABSTRACT" rows="5"></textarea>
+                                <label>DETAILS</label>
+                                <div class="doc-details">
+                                    <div class="doc-details-item">
+                                        <span>Journal</span>
+                                        <input name="detail-journal" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>Year</span>
+                                        <input name="detail-year" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>Volume</span>
+                                        <input name="detail-volume" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>Issue</span>
+                                        <input name="detail-issue" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>Pages</span>
+                                        <input name="detail-page" type="text">
+                                    </div>
+                                </div>
+                                <label>CATALOG IDS</label>
+                                <div class="doc-details">
+                                    <div class="doc-details-item">
+                                        <span>ArXiv ID</span>
+                                        <input name="detail-id" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>DOI</span>
+                                        <input name="detail-DOI" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>PMID</span>
+                                        <input name="detail-PMID" type="text">
+                                    </div>
+                                    <div class="doc-details-item">
+                                        <span>ISBN</span>
+                                        <input name="detail-ISBN" type="text">
+                                    </div>
+                                </div>
+                                <label>URLS</label>
+                                <div class="doc-url-area">
+                                    <div class="doc-url">
+                                        <input name="urls" type="text">
+                                        <i class="icon icon-action icon-remove url-remove"></i>
+                                    </div>
+                                    <a href="#" class="url-add-btn">+ Add URLS</a>
+                                </div>
+                                <label>TAGS</label>
+                                <div class="doc-tag-area">
+                                    <ul class="doc-tag-list">
+                                        <li class="doc-tag-input"><input type="text" placeholder="Add Tag"></li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="lib-doc-note">
+                    <h2 class="doc-title">Wide & Deep Learning for Recommender Systems</h2>
+                    <div class="doc-note">
+                        <h6>Write notes</h6>
+                        <div class="doc-note-area">
+                            <textarea name="note"></textarea>
+                            <div class="doc-note-action">
+                                <i class="icon icon-save" title="保存"></i>
+                                <i class="icon icon-empty note-empty-btn" title="清除"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        copyright &copy; 武汉大学信息检索与知识挖掘研究所
+    </footer>
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/lib-aside-nav.js" type="text/javascript"></script>
+</body>
+</html>
