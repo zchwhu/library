@@ -191,5 +191,24 @@ $(function () {
         });
     }).on("click",".note-empty-btn",function () {
         $(".doc-note-area textarea").val("");
+    }).on("click",".lib-modal-tab-btn",function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        if($(this).hasClass("group-tab")){
+            $(".lib-modal-body-mylib").css({"left":-100+"%"});
+            $(".lib-modal-body-group").css({"left":0});
+        }else{
+            $(".lib-modal-body-mylib").css({"left":0});
+            $(".lib-modal-body-group").css({"left":100+"%"});
+        }
+    }).on("focus",".create-folder-main input",function () {
+        $(this).parent(".create-folder-main").addClass("active");
+    }).on("blur",".create-folder-main input",function () {
+        $(this).parent(".create-folder-main").removeClass("active");
+    }).on("click",".lib-modal-mylib-item",function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else{
+            $(this).addClass("active").siblings().removeClass("active");
+        }
     })
 })
