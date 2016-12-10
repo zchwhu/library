@@ -1372,8 +1372,309 @@ footer{
     margin-left: -4px;
 }
 
+.icon-enter{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: url("../img/enter.png") no-repeat center;
+    top: 8px;
+    right: 8px;
+    background-size: 12px 12px;
+    opacity: 0;
+    -webkit-transition: opacity .4s ease-in-out 0s;
+    -moz-transition: opacity .4s ease-in-out 0s;
+    -ms-transition: opacity .4s ease-in-out 0s;
+    -o-transition: opacity .4s ease-in-out 0s;
+    transition: opacity .4s ease-in-out 0s;
+}
+
+.icon-create{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background: url("../img/create.png") no-repeat center;
+    background-position: -16px 0;
+}
+
 .line{
     height: 1px;
     background-color: silver;
     width: 100%;
+}
+
+/*模态框*/
+.lib-modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.lib-modal-main{
+    padding: 48px 0;
+    margin: 10px auto;
+    width: 400px;
+    position: relative;
+    height: 600px;
+    max-height: 90%;
+    box-sizing: border-box;
+}
+
+.lib-modal-header{
+    width: 100%;
+    height: 48px;
+    padding: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #0088cf;
+    color: #fff;
+    line-height: 16px;
+    font-size: 13px;
+}
+
+.lib-modal-body{
+    height: 100%;
+    background-color: #fff;
+    padding-top: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.lib-modal-tab{
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.lib-modal-tab-btn{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    color: #999;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+    position: relative;
+    overflow: visible;
+}
+
+.lib-modal-tab-btn:first-child::before{
+    width: 1px;
+    height: 20px;
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 10px;
+    background-color: #cfcfcf;
+}
+
+.lib-modal-tab-btn::after{
+    height: 1px;
+    background-color: #0088cf;
+    content: '';
+    position: absolute;
+    bottom:-1px;
+    -webkit-transition: width .5s ease-in-out 0s;
+    -moz-transition: width .5s ease-in-out 0s;
+    -ms-transition: width .5s ease-in-out 0s;
+    -o-transition: width .5s ease-in-out 0s;
+    transition: width .5s ease-in-out 0s;
+    width: 0;
+}
+
+.lib-modal-tab-btn:first-child:after{
+    right: 0;
+}
+
+.lib-modal-tab-btn:last-child:after{
+  left: 0;
+}
+
+.lib-modal-tab-btn:first-child.active::after{
+    width: 100%;
+}
+
+.lib-modal-tab-btn:last-child.active::after{
+    width: 100%;
+}
+
+.lib-modal-body-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.lib-modal-body-mylib,.lib-modal-body-group{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-top: 48px;
+    box-sizing: border-box;
+    top: 0;
+    -webkit-transition: left .5s ease-in-out 0s;
+    -moz-transition: left .5s ease-in-out 0s;
+    -ms-transition: left .5s ease-in-out 0s;
+    -o-transition: left .5s ease-in-out 0s;
+    transition: left .5s ease-in-out 0s;
+}
+
+.lib-modal-body-mylib{
+    left: 0;
+}
+
+.lib-modal-body-group{
+    left: 100%;
+}
+
+.create-folder{
+    position: absolute;
+    margin-top: 8px;
+    height: 32px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+.create-folder-main{
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: background-color .4s ease-in-out 0s;
+    -moz-transition: background-color .4s ease-in-out 0s;
+    -ms-transition: background-color .4s ease-in-out 0s;
+    -o-transition: background-color .4s ease-in-out 0s;
+    transition: background-color .4s ease-in-out 0s;
+    display: block;
+}
+
+a.create-folder-main{
+    color: #555;
+    line-height: 32px;
+    font-size: 13px;
+}
+
+.lib-modal-mylib-list{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.lib-modal-mylib-item{
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    padding-left: 8px;
+    box-sizing: border-box;
+    display: block;
+    color: #555;
+    font-size: 13px;
+    -webkit-transition: all .4s ease-in-out 0s;
+    -moz-transition: all .4s ease-in-out 0s;
+    -ms-transition: all .4s ease-in-out 0s;
+    -o-transition: all .4s ease-in-out 0s;
+    transition: all .4s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.lib-modal-mylib-item a{
+    display: block;
+    font-size: inherit;
+    color: inherit;
+}
+
+.lib-modal-mylib-item:hover{
+    background: #f6f6f6;
+}
+
+.lib-modal-mylib-item.active{
+    background: #F2F9FD;
+    color: #0088cf;
+}
+
+.lib-modal-mylib-item i{
+    margin-right: 8px;
+}
+
+.create-folder-main.active{
+    background-color: #F2F9FD;
+}
+
+.create-folder-main.active .icon-enter{
+    opacity: 1;
+}
+
+.create-folder-main.active .icon-create{
+    background-position: 0 0;
+}
+
+.create-folder-main input{
+    border: 0;
+    padding: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #555;
+    font-size: 13px;
+}
+
+.lib-modal-footer{
+    position: absolute;
+    height: 48px;
+    right: 0;
+    bottom: 0;
+    background-color: #f0f0f0;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+}
+
+.lib-modal-btn{
+    height: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #0088cf;
+    opacity: 0.3;
+    border: none;
+    right: 16px;
+    top: 8px;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.lib-modal-btn.active{
+    opacity: 1;
+}
+
+.lib-modal-close{
+    position: absolute;
+    height: 48px;
+    right: 0;
+    top: 0;
+    width: 48px;
+    background: url("../img/close.png") no-repeat center;
+    cursor: pointer;
 }
