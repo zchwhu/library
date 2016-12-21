@@ -439,7 +439,18 @@ main{
     top: 33px;
     bottom: 32px;
     width: 100%;
-    padding: 3px;
+    padding: 3px 0 35px 0;
+}
+
+.lib-doc-list{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    bottom: 35px;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .lib-doc-item.selected{
@@ -1404,6 +1415,57 @@ footer{
     width: 100%;
 }
 
+/*分页*/
+.lib-pagination{
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    background-color: #fff;
+    height: 35px;
+}
+
+.lib-pagination>ul{
+    margin-top: 2px;
+}
+
+.lib-page{
+    display: inline;
+}
+
+.lib-page>a{
+    padding: 6px 9px;
+    color: #0088cf;
+    border: 1px solid #ddd;
+    display: inline-block;
+    line-height: 16px;
+    font-size: 12px;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+}
+
+.lib-page>a:hover{
+    background-color: #0088cf;
+    color: #fff;
+}
+
+.lib-page.active>a{
+    color: #fff;
+    background-color: #0088cf;
+    cursor: default;
+}
+
+.lib-page.disabled>a{
+    color: #aaa;
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
 /*模态框*/
 .lib-modal{
     position: fixed;
@@ -1412,6 +1474,7 @@ footer{
     top: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.4);
+    display: none;
 }
 
 .lib-modal-main{
